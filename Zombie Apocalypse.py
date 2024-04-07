@@ -291,6 +291,10 @@ while True:
                                 pygame.draw.rect(screen, green, (randomGraphics[i][0], randomGraphics[i][1], 1, 1))
                 if score == 5:
                     personal_story = True
+                if score == 10:
+                    people = True
+                if score == 15:
+                    professions = True
                 if abhikarthi_button_color == (200, 200, 27):
                     show_text("L Zombies!!!", 0, 60, red, 50,"Freesans")
                 show_text(f"Your score is {score}", 0, 0, white, 25, "freesans")
@@ -630,10 +634,15 @@ while True:
                     quit()
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     if continue_.collidepoint(pygame.mouse.get_pos()):
+                        score += 1
                         personal_story = False
                         people = False
                         professions = False
-                
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_ESCAPE:
+                        health = max_health
+                        zombies = []
+                        start = False
             if personal_story:
                 show_text("Personal Story",250, 0, white, 50, "Times New Roman")
                 show_text("I was first exposed to this topic when my dad bought me a Udemy course in Python when I was around 7 years old. At", 0, 75, white, 15, "Times New Roman")
@@ -642,6 +651,19 @@ while True:
                 show_text("was hooked when I started learning about GUI (Graphical User Interface). I was amazed at what you could do with", 0, 150, white, 15, "Times New Roman")
                 show_text("programming and was blown away. Coding games especially seemed to catch my attention. I started working on ", 0, 175, white, 15, "Times New Roman")
                 show_text('minigames like tic-tac-toe and pong, and now I am working on slightly bigger games like “Zombie Apocalypse.”', 0, 200, white, 15, "Times New Roman")
+                show_text("Continue to score 10 to see what's next!", 0, 225, white, 15, "Times New Roman")
+
+            if people:
+                show_text("People", 265, 0, white, 50, "Times New Roman")
+                show_text("Some people that I admire and are famous for their passion are Notch, Bill Gates, Guido van Rossum, and Mark", 0, 75, white, 15, "Times New Roman")
+                show_text("Zuckersburg. The people I listed made very big projects such as Microsoft, Minecraft, and Meta; but more than that I am", 0, 100, white, 15, "Times New Roman")
+                show_text("inspired by their story. Continue to score 15 to see what's next!", 0, 125, white, 15, "Times New Roman")
+            if professions:
+                show_text("Professions", 255, 0, white, 50, "Times New Roman")
+                show_text("Some professions that coding is required for are a web developer, technician, software engineer, data scientist, systems", 0, 75, white, 15, "Times New Roman")
+                show_text("This is because the jobs I listed are all based on programming and you need to have some type of education in that field to", 0, 100, white, 15, "Times New Roman")
+                show_text("be allowed into that job. This is the last paragraph! Continue playing or press esc. to quit to menu.", 0, 125, white, 15, "Times New Roman")
+                          
     frame += 1
     if abhikarthi_button_color != (200, 200, 27):
         clock.tick(20)
