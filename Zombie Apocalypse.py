@@ -605,15 +605,6 @@ while True:
                         else:
                             player = screen.blit(idleright[idle], (x, y))
                         floorDifference = 4
-                #if x in range(300, 750) and y < 335: # Third Floor
-                    #floor = 300
-                #elif x in range(480, 550) and y < 275: # Fourth Floor
-                    #floor = 260
-                #elif x in range(0, 255) and y < 360 and (x not in range(480, 550) and y >= 275): # Second Floor
-                    #floor = 370
-                #elif x not in range(0, 255) and y > 370: # First Floor
-                    #floor = 400
-
                 if x > 675:
                     x = 11
                 elif x < 10:
@@ -631,15 +622,26 @@ while True:
                             start = False
                 show_text("Paused", 0, 300, grey, 25, "freesans")
         else:
+            screen.fill((11, 11, 184))
+            continue_ = pygame.draw.rect(screen, (250, 250, 77), (315, 400, 147, 51))
+            show_text("Continue!", 315, 400, black, 30, "Comic Sans") 
             for event in pygame.event.get():
-                if event == pygame.QUIT:
+                if event.type == pygame.QUIT:
                     quit()
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    if continue_.collidepoint(pygame.mouse.get_pos()):
+                        personal_story = False
+                        people = False
+                        professions = False
                 
             if personal_story:
-                screen.fill((11, 11, 184))
-                show_text("Personal Story", 305, 0, white, 50, "Times New Roman")
+                show_text("Personal Story",250, 0, white, 50, "Times New Roman")
                 show_text("I was first exposed to this topic when my dad bought me a Udemy course in Python when I was around 7 years old. At", 0, 75, white, 15, "Times New Roman")
-
+                show_text("the time, I wasn't very thrilled about coding, After a while, I even quit the course and I stopped learning from", 0, 100, white, 15, "Times New Roman")
+                show_text("it. My dad enrollled me in a class, and I learned more about the basic syntax, but then the real spark happened. I", 0, 125, white, 15, "Times New Roman")
+                show_text("was hooked when I started learning about GUI (Graphical User Interface). I was amazed at what you could do with", 0, 150, white, 15, "Times New Roman")
+                show_text("programming and was blown away. Coding games especially seemed to catch my attention. I started working on ", 0, 175, white, 15, "Times New Roman")
+                show_text('minigames like tic-tac-toe and pong, and now I am working on slightly bigger games like “Zombie Apocalypse.”', 0, 200, white, 15, "Times New Roman")
     frame += 1
     if abhikarthi_button_color != (200, 200, 27):
         clock.tick(20)
