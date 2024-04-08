@@ -111,7 +111,7 @@ for i in range(0, 9):
     image = pygame.transform.flip(image, True, False)
     deadleft.append(image)
 for i in range(1, 10):
-    image = pygame.image.load(f"/png-2/male/Walk ({i}).png")
+    image = pygame.image.load(f"png-2/male/Walk ({i}).png")
     image = pygame.transform.scale(image, (80, 100))
     zombieright.append(image)
     image = pygame.transform.flip(image, True, False)
