@@ -656,7 +656,9 @@ while True:
                 show_text("People", 265, 0, white, 50, "Times New Roman")
                 show_text("Some people that I admire and are famous for their passion are Notch, Bill Gates, Guido van Rossum, and Mark", 0, 75, white, 15, "Times New Roman")
                 show_text("Zuckersburg. The people I listed made very big projects such as Microsoft, Minecraft, and Meta; but more than that I am", 0, 100, white, 15, "Times New Roman")
-                show_text("inspired by their story. Continue to score 15 to see what's next!", 0, 125, white, 15, "Times New Roman")
+                show_text("inspired by their story. Most of them didn't really have much of an education. It was there interest that motivated them", 0, 125, white, 15, "Times New Roman")
+                show_text("to convert it into a passion. Continue to score 15 to see what's next!", 0, 125, white, 15, "Times New Roman")
+
             if professions:
                 show_text("Professions", 255, 0, white, 50, "Times New Roman")
                 show_text("Some professions that coding is required for are a web developer, technician, software engineer, data scientist, systems", 0, 75, white, 15, "Times New Roman")
