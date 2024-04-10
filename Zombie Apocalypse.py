@@ -656,14 +656,15 @@ while True:
                 show_text("People", 265, 0, white, 50, "Times New Roman")
                 show_text("Some people that I admire and are famous for their passion are Notch, Bill Gates, Guido van Rossum, and Mark", 0, 75, white, 15, "Times New Roman")
                 show_text("Zuckersburg. The people I listed made very big projects such as Microsoft, Minecraft, and Meta; but more than that I am", 0, 100, white, 15, "Times New Roman")
-                show_text("inspired by their story. Most of them didn't really have much of an education. It was there interest that motivated them", 0, 125, white, 15, "Times New Roman")
+                show_text("inspired by their story. Most of them didn't really have much of an education. It was their interest that motivated them", 0, 125, white, 15, "Times New Roman")
                 show_text("to convert it into a passion. Continue to score 15 to see what's next!", 0, 150, white, 15, "Times New Roman")
 
             if professions:
                 show_text("Professions", 255, 0, white, 50, "Times New Roman")
-                show_text("Some professions that coding is required for are a web developer, technician, software engineer, data scientist, systems", 0, 75, white, 15, "Times New Roman")
-                show_text("This is because the jobs I listed are all based on programming and you need to have some type of education in that field to", 0, 100, white, 15, "Times New Roman")
-                show_text("be allowed into that job. This is the last paragraph! Continue playing or press esc. to quit to menu.", 0, 125, white, 15, "Times New Roman")
+                show_text("Some professions that coding is required for are a web developer, technician, software engineer, data scientist, and a ", 0, 75, white, 15, "Times New Roman")
+                show_text("systems analyst. This is because the jobs I listed are all based on programming and you need to have some type of", 0, 100, white, 15, "Times New Roman")
+                show_text("education in that field to be allowed into that job. This is the last paragraph! Continue playing or press esc. to quit to", 0, 125, white, 15, "Times New Roman")
+                show_text("menu.", 0, 150, white, 15, "Times New Roman")
                           
     frame += 1
     if abhikarthi_button_color != (200, 200, 27):
